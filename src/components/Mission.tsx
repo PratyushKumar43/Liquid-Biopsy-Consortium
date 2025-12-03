@@ -24,7 +24,7 @@ export default function Mission() {
       <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(#6366f1 1px, transparent 1px)', backgroundSize: '32px 32px'}}></div>
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10 reveal-element">
         <h2 className="text-h2 font-medium leading-relaxed font-serif italic text-indigo-50">
-          "Our mission is to accelerate liquid biopsy technologies for cancer detection and therapy, advancing new assays to test patient fluids including blood, urine, and saliva."
+          &ldquo;Our mission is to accelerate liquid biopsy technologies for cancer detection and therapy, advancing new assays to test patient fluids including blood, urine, and saliva.&rdquo;
         </h2>
       </div>
     </section>
