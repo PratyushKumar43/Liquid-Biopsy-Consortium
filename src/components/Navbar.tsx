@@ -20,6 +20,7 @@ export default function Navbar() {
           <a href="#partners" className="hover:text-indigo-600 transition-colors">Partners</a>
           <a href="#research" className="hover:text-indigo-600 transition-colors">Research</a>
           <a href="#resources" className="hover:text-indigo-600 transition-colors">Resources</a>
+          <a href="/faculty" className="hover:text-indigo-600 transition-colors">Faculty</a>
         </div>
 
         <button className="bg-indigo-50 font-sans text-indigo-700 px-5 py-2 rounded-full text-[14px] font-semibold hover:bg-indigo-100 transition-colors flex items-center gap-2">
