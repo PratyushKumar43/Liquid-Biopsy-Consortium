@@ -21,12 +21,14 @@ function getNameToPhotoPath(name: string): string | null {
   const nameToPhoto: Record<string, string> = {
     "Earu Banoth": "/faculty_photos/earu_banoth.jpg",
     "Rupa Haldavnekar": "/faculty_photos/rupa_haldavnekar.jpg",
+    "Deeptha Ishwar": "/faculty_photos/Deeptha%20Ishwar.jpeg",
     "Bala Chakravarthy Neelapu": "/faculty_photos/bala_chakravarthy_neelapu.jpg",
     "Ayyappasamy Sudalaiyadum Perumal": "/faculty_photos/ayyappasamy_sudalaiyadum_perumal.jpg",
+    "Annie Shuk-On-Leung": "/faculty_photos/Annie%20Shuk-On-Leung.jpg",
     "Dan V Nicolau": "/faculty_photos/dan_v_nicolau.jpg",
     "Amrita Singh": "/faculty_photos/Amrita%20singh.jpeg",
     "Prasoon Kumar": "/faculty_photos/prasoon_kumar.jpg",
-    "Dan Nicolau Jr": "/faculty_photos/dan_nicolau_jr.jpg",
+    "Dan Nicolau Jr": "/faculty_photos/dan-nicolau-profile-pic-edited.xbac094af.jpeg",
     "Pallavi Shukla": "/faculty_photos/pallavi_shukla.jpg",
     "Jeffery Zuccato": "/faculty_photos/jeffery_zuccato.jpg",
   };
