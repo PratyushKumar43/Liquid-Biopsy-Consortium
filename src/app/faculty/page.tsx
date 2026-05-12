@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Globe, GraduationCap, Linkedin } from "lucide-react";
 
 type Faculty = {
   name: string;
@@ -9,7 +10,9 @@ type Faculty = {
   primaryFocus: string;
   keyAreas: string;
   achievements: string;
-  scholarUrl: string;
+  universityUrl?: string;
+  scholarUrl?: string;
+  linkedinUrl?: string;
   photoUrl?: string;
 };
 
@@ -21,7 +24,7 @@ function getNameToPhotoPath(name: string): string | null {
     "Bala Chakravarthy Neelapu": "/faculty_photos/bala_chakravarthy_neelapu.jpg",
     "Ayyappasamy Sudalaiyadum Perumal": "/faculty_photos/ayyappasamy_sudalaiyadum_perumal.jpg",
     "Dan V Nicolau": "/faculty_photos/dan_v_nicolau.jpg",
-    "Amrita Singh": "/faculty_photos/amrita_singh.jpg",
+    "Amrita Singh": "/faculty_photos/Amrita%20singh.jpeg",
     "Prasoon Kumar": "/faculty_photos/prasoon_kumar.jpg",
     "Dan Nicolau Jr": "/faculty_photos/dan_nicolau_jr.jpg",
     "Pallavi Shukla": "/faculty_photos/pallavi_shukla.jpg",
@@ -40,8 +43,9 @@ const facultyList: Faculty[] = [
       "Opto-Microfluidics, Flow-Cytometry, Point-of-Care Diagnostics, Medical Devices",
     achievements:
       "Microfluidic Absorption Flow-Cytometer, AI-Enabled Autofocusing Microscope for Disease Detection, SERB Funded Projects",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=67YLjwsAAAAJ&hl=en",
+    universityUrl: "https://www.nitrkl.ac.in/BM/~banothe/",
+    scholarUrl: "https://scholar.google.com/citations?user=67YLjwsAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/dr-earu-banoth-340303245/",
   },
   {
     name: "Rupa Haldavnekar",
@@ -52,8 +56,9 @@ const facultyList: Faculty[] = [
       "SERS-ML Liquid Biopsy, Cancer Detection, Nano-material Design, Machine Learning",
     achievements:
       "Cancer Stem Cell Analysis, Liquid Biopsy Platform for Early Cancer Diagnosis, Raman Spectroscopy Research",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=1wHT0XEAAAAJ&hl=en",
+    universityUrl: "https://www.ou.edu/coe/ece/people/faculty/rupa-haldavnekar",
+    scholarUrl: "https://scholar.google.com/citations?user=1wHT0XEAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/rupahaldavnekar/",
   },
   {
     name: "Deeptha Ishwar",
@@ -64,8 +69,9 @@ const facultyList: Faculty[] = [
       "Molecular Biology, Cancer Research, Breast Tumor Analysis, Biomarkers",
     achievements:
       "Profiling Breast Tumor Heterogeneity, Cell Characterization, DNA Methylation Studies",
-    scholarUrl:
-      "https://scholar.google.com/citations?hl=en&user=YOUR_ID",
+    universityUrl: "https://www.linkedin.com/in/deeptha-ishwar-13303310b/",
+    scholarUrl: "https://scholar.google.com/citations?hl=en&user=YOUR_ID",
+    linkedinUrl: "https://www.linkedin.com/in/deeptha-ishwar-13303310b/",
   },
   {
     name: "Bala Chakravarthy Neelapu",
@@ -76,8 +82,9 @@ const facultyList: Faculty[] = [
       "ECG Analysis, Sleep Apnea Detection, AI in Medical Imaging, Deep Learning Models",
     achievements:
       "Cephalometric Landmark Detection, Kidney Stone Detection, Atrial Fibrillation Classification, 1175+ Citations",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=BPxEzosAAAAJ&hl=en",
+    universityUrl: "https://www.nitrkl.ac.in/BM/~neelapubc/",
+    scholarUrl: "https://scholar.google.com/citations?user=BPxEzosAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/bala-chakravarthy-neelapu-7ab57050/",
   },
   {
     name: "Ayyappasamy Sudalaiyadum Perumal",
@@ -88,8 +95,9 @@ const facultyList: Faculty[] = [
       "Bio-inspired Information, Biological System Repurposing, Interdisciplinary Research",
     achievements:
       "Novel Biodevices Development, Cutting-edge Nanotechnology Applications",
-    scholarUrl:
-      "https://scholar.google.co.in/citations?user=TCxqu5gAAAAJ&hl=en",
+    universityUrl: "https://www.mcgill.ca/bioengineering/ayyappa-sudalaiyadum-perumal",
+    scholarUrl: "https://scholar.google.co.in/citations?user=TCxqu5gAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/ayyappasamy-sudalaiyadum-perumal-06011112b/",
   },
   {
     name: "Annie Shuk-On-Leung",
@@ -100,8 +108,9 @@ const facultyList: Faculty[] = [
       "Cervical Cancer Biomarkers, Circulating Tumor DNA, Cancer Detection",
     achievements:
       "Protein Marker Detection, ctDNA Analysis, Translational Laboratory, Cancer Prevention Research",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=r7bqMBoAAAAJ&hl=en",
+    universityUrl: "https://www.mcgill.ca/obgyn/shuk-annie-leung",
+    scholarUrl: "https://scholar.google.com/citations?user=r7bqMBoAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/dr-annie-leung/",
   },
   {
     name: "Dan V Nicolau",
@@ -112,8 +121,9 @@ const facultyList: Faculty[] = [
       "Hybrid Nanodevices, Motor Protein Dynamics, Lab-on-Chip, Biosensors",
     achievements:
       "Molecular Motors Research, Smart Micro/Nano-surfaces, High-throughput Screening, 5250+ Citations",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=3VOTDtkAAAAJ&hl=en",
+    universityUrl: "https://www.mcgill.ca/bioengineering/dan-nicolau",
+    scholarUrl: "https://scholar.google.com/citations?user=3VOTDtkAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/danvnicolau/",
   },
   {
     name: "Chamundeeswari G",
@@ -124,8 +134,9 @@ const facultyList: Faculty[] = [
       "Gesture Recognition, Image Fusion, Trajectory Data Mining, Deep Learning",
     achievements:
       "Hand Gesture Recognition for HMI, Mineral Deposit Mapping, Road Surveillance Systems, 345+ Citations",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=dN3LBYIAAAAJ&hl=en",
+    universityUrl: "https://www.linkedin.com/in/vijaya-chamundeeswari-79584060/",
+    scholarUrl: "https://scholar.google.com/citations?user=dN3LBYIAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/vijaya-chamundeeswari-79584060/",
   },
   {
     name: "Amrita Singh",
@@ -136,8 +147,9 @@ const facultyList: Faculty[] = [
       "Biomedical Image Analysis, Scale-Invariant Object Detection, Point Cloud Analysis, Self-Supervised Learning",
     achievements:
       "Virus Patch Detection, 3D Scene Understanding, Weakly Supervised Learning, Deep Learning Models, 956+ Citations",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=1Dmb9mgAAAAJ&hl=en",
+    universityUrl: "https://www.nitrkl.ac.in/BM/~singham/",
+    scholarUrl: "https://scholar.google.com/citations?user=UiiWbwYAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/amrita-singh-0070703a/",
   },
   {
     name: "Prasoon Kumar",
@@ -148,8 +160,9 @@ const facultyList: Faculty[] = [
       "Microfluidic Devices, Blood Microsampling, Molecular Diagnostics, Innovative Medical Solutions",
     achievements:
       "Blood Microsampler Development, BIRAC Funding, SIDBI Startup Award, Patent Holder",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=t6k-34sAAAAJ&hl=en",
+    universityUrl: "https://www.nitrkl.ac.in/BM/~kumarprasoon/",
+    scholarUrl: "https://scholar.google.com/citations?user=t6k-34sAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/prasoonkumar1985/",
   },
   {
     name: "Dan Nicolau Jr",
@@ -160,20 +173,9 @@ const facultyList: Faculty[] = [
       "Immune Network Computation, Disease Mathematics, Inflammation Modeling, Complex Biological Systems",
     achievements:
       "Immune System Modeling, AI in Medicine, Mathematical Approaches to Biology",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=MZ7P15YAAAAJ&hl=en",
-  },
-  {
-    name: "Varun Soria",
-    country: "India",
-    position: "Tech Industry Researcher",
-    primaryFocus: "Machine Learning & Security",
-    keyAreas:
-      "Federated Learning, Neural Program Synthesis, Computer Vision, Privacy-Preserving ML",
-    achievements:
-      "Leading Federated Learning at OpenMined, UC Berkeley Research Scholar, IIT Kanpur Graduate",
-    scholarUrl:
-      "https://scholar.google.com/scholar?q=Varun+Soria+researcher",
+    universityUrl: "https://www.kcl.ac.uk/people/dan-nicolau",
+    scholarUrl: "https://scholar.google.com/citations?user=MZ7P15YAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/danvnicolau/",
   },
   {
     name: "Pallavi Shukla",
@@ -184,8 +186,9 @@ const facultyList: Faculty[] = [
       "Cancer Epidemiology, Non-Communicable Diseases, Screening Programs, Health Promotion",
     achievements:
       "Cancer Care Research, Preventive Oncology, Visual Impairment Research, National Health Programs",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=1FChkGwAAAAJ&hl=en",
+    universityUrl: "https://www.linkedin.com/in/pallavi-shukla-23518855/",
+    scholarUrl: "https://scholar.google.com/citations?user=1FChkGwAAAAJ&hl=en",
+    linkedinUrl: "https://www.linkedin.com/in/pallavi-shukla-23518855/",
   },
   {
     name: "Jeffery Zuccato",
@@ -196,8 +199,8 @@ const facultyList: Faculty[] = [
       "Brain Tumor Biomarkers, Liquid Biopsy, DNA Methylation, Skull-Base Surgery",
     achievements:
       "Brain Metastasis Prediction, DNA Methylation Signatures (Nature Medicine), Cancer Genomics",
-    scholarUrl:
-      "https://scholar.google.com/citations?user=6O9x9RoAAAAJ&hl=en",
+    universityUrl: "https://medicine.ouhsc.edu/academic-departments/neurosurgery/faculty/jeffrey-zuccato",
+    scholarUrl: "https://scholar.google.com/citations?user=6O9x9RoAAAAJ&hl=en",
   },
 ];
 
@@ -224,6 +227,42 @@ function FacultyCard({ faculty }: { faculty: Faculty }) {
           <span className="text-2xl font-semibold text-slate-600">
             {initials}
           </span>
+        )}
+      </div>
+
+      <div className="flex gap-4 mt-2">
+        {faculty.universityUrl && (
+          <a
+            href={faculty.universityUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-400 hover:text-indigo-600 transition-colors"
+            title="University Profile"
+          >
+            <Globe className="w-5 h-5" />
+          </a>
+        )}
+        {faculty.scholarUrl && (
+          <a
+            href={faculty.scholarUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-400 hover:text-indigo-600 transition-colors"
+            title="Google Scholar"
+          >
+            <GraduationCap className="w-5 h-5" />
+          </a>
+        )}
+        {faculty.linkedinUrl && (
+          <a
+            href={faculty.linkedinUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-400 hover:text-indigo-600 transition-colors"
+            title="LinkedIn Profile"
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
         )}
       </div>
 
@@ -255,17 +294,6 @@ function FacultyCard({ faculty }: { faculty: Faculty }) {
           </p>
           <p>{faculty.achievements}</p>
         </div>
-      </div>
-
-      <div className="mt-auto pt-4">
-        <a
-          href={faculty.scholarUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center justify-center px-6 py-2 rounded-full text-xs font-semibold tracking-wide uppercase bg-amber-500 text-white hover:bg-amber-600 transition-colors"
-        >
-          Read More
-        </a>
       </div>
     </div>
   );
